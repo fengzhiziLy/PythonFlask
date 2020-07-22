@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block nav_title %} {{ super() }} 首页{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <p>所有的项目：5个项目，500个接口</p>
+    {% include '_project.html' %}
+    {% from '_macros.html' import render_field %}
+    {% set data = ['hello', 'apple', 'test', 'python'] %}
+    {{ render_field(data) }}
+{% endblock %}
